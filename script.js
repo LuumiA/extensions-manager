@@ -16,8 +16,10 @@ fetch("data.json")
       const button = document.createElement("button");
       button.textContent = "remove";
 
-      button.addEventListener("click", () => {
-        console.log(extension.name);
+      button.addEventListener("click", (event) => {
+        const elementClique = event.target;
+        const card = elementClique.parentElement;
+        card.remove();
       });
       list.append(element);
       element.appendChild(paragraph);
