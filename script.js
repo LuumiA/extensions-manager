@@ -15,6 +15,10 @@ fetch("data.json")
       image.alt = `${extension.name}`;
       const button = document.createElement("button");
       button.textContent = "remove";
+
+      button.addEventListener("click", () => {
+        console.log(extension.name);
+      });
       list.append(element);
       element.appendChild(paragraph);
       element.appendChild(image);
