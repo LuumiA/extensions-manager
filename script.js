@@ -13,9 +13,12 @@ fetch("data.json")
       const image = document.createElement("img");
       image.src = `${extension.logo}`;
       image.alt = `${extension.name}`;
+      const button = document.createElement("button");
+      button.textContent = "remove";
+      list.append(element);
       element.appendChild(paragraph);
       element.appendChild(image);
-      list.append(element);
+      element.appendChild(button);
     });
   })
   .catch((error) => console.error("Error fetching data:", error));
